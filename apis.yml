@@ -1,4 +1,16 @@
 aid: zelta
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/zelta.png
 name: Zelta
 description: Zelta is a company surfaced as a portfolio company of techstars and added to the API Evangelist
   network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
@@ -9,11 +21,18 @@ x-backed-by:
 - techstars
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-enrichment-findings:
+  website_platform: Webflow (proxy-ssl.webflow.com); Cloudflare DNS; Google Workspace email
+  api_surface: none discovered — no OpenAPI, docs, developer portal, packages, or MCP found
+  acquisition_signal: app.zelta.ai returns HTTP 301 -> https://www.pendo.io/ (Zelta app now points to Pendo)
+  tls_note: zelta.ai edge failed TLS handshake from probe host (github/pendo/webflow.com controls all succeeded), consistent with an unprovisioned/parked custom-domain cert
+  probed: '2026-07-21'
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
+- Techstars
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -21,5 +40,12 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/zelta-domain-security.yml
 - type: Website
   url: https://zelta.ai/
+x-enrichment:
+  date: '2026-07-21'
+  status: minimal
+  artifacts_added: 1
+  pass: local-v1
