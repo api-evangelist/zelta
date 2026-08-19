@@ -27,7 +27,7 @@ x-enrichment-findings:
   acquisition_signal: app.zelta.ai returns HTTP 301 -> https://www.pendo.io/ (Zelta app now points to Pendo)
   tls_note: zelta.ai edge failed TLS handshake from probe host (github/pendo/webflow.com controls all succeeded), consistent with an unprovisioned/parked custom-domain cert
   probed: '2026-07-21'
-specificationVersion: '0.20'
+specificationVersion: '0.23'
 created: '2026-07-17'
 modified: '2026-07-21'
 tags:
